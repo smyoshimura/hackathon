@@ -1,0 +1,27 @@
+.tweet{
+    position: relative;
+    height: 9.2em;
+
+}
+.tweet small{
+    display: block;
+}
+
+img.logo {
+    width: 200%;
+}
+
+svg {
+    width: 5%;
+}
+.prof-pic{
+    width: 170%;
+}
+
+svg{
+    margin-left: 8%
+}
+
+.tweet .col-xs-2:first-child {
+    margin-right: 1%;
+}

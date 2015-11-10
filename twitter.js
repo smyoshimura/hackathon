@@ -1,32 +1,18 @@
 
-//Twitter related code only!
-//
-//twitter: {
-//    getData: function(search, callback){
-//        this.errors = [];
-//
-//        if(typeof search != "string"){
-//            this.errors.push("'Search' must be a string, you gave a " + typeof search);
-//        }
-//
-//        if(typeof callback != "undefined" && typeof callback != "function"){
-//            this.errors.push("'Callback' must be a function, you gave a " + typeof callback);
-//        }
-//
-//        if(this.errors.length > 0){
-//            console.log("There were errors with your request:", this.errors);
-//            return this.errors;
-//        }else {
-//            var data = {search_term: search};
-//            var url = "http://s-apis.learningfuze.com/hackathon/twitter/index.php";
-//            apis.ajax(data, url, callback);
-//        }
-//    },
-//    errors: []
-//
-//},
-function twitterCallback(response){
-    console.log(response);
+ function twitterCallback(success, obj){
+    console.log(success, obj);
+     var author = obj.tweets.statuses[0].user.name;
+     var profpic = obj.tweets.statuses[0].user.profile_image_url;
+     var tweet = obj.tweets.statuses[0].text;
+     var username = obj.tweets.statuses[0].user['screen_name'];
+     var timeStamp = obj.tweets.statuses[0].user['created_at'];
+     $('#twitter-section h5').append(author);
+     $('.prof-pic').attr('src', profpic);
+     $('.tweet-text').append(tweet);
+     $('#twitter-section .col-xs-7 small').append(username);
+     $('.time-stamp').append(timeStamp);
+
+     console.log(tweet, obj);
 }
 $(function(){
     $('button').click(function(){
