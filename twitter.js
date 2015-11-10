@@ -18,7 +18,8 @@ $(function(){
 
 function newTweet(author, profpic, tweet, username, timeStamp){
 
-
+    var parentContainer = $('<div>').addClass('container-fluid');
+        var
 
 
 
