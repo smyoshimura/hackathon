@@ -1,0 +1,60 @@
+body {
+    text-align: center;
+    font-family: 'Old Standard TT', serif;
+}
+
+#search-section {
+    background: url("images/searchframe.png") center no-repeat;
+    background-size: 45% 85%;
+    height: 20vh;
+    align-content: center;
+}
+
+#search-section label {
+    position: absolute;
+    top: 6%;
+    left: 42.5%;
+}
+
+.search-box {
+    margin: auto;
+    float: none;
+    width: 30%;
+    position: absolute;
+    top: 9%;
+    left: 35%;
+}
+
+#search-section button {
+    margin: auto;
+    position: absolute;
+    top: 12%;
+    left: 43.5%;
+    border: none;
+    background-color: cornsilk;
+}
+
+#search-section button:active {
+    color: whitesmoke;
+    background-color: burlywood;
+}
+
+#search-section button:focus, input:focus {
+    outline: 0;
+}
+
+#youtube-section {
+    margin: auto;
+    padding: 1%;
+    height: 50vh;
+    background: url("images/youtubeframe.png") center no-repeat;
+    background-size: 70% 99%;
+}
+
+#twitter-section {
+    background-color: #337ab7;
+}
+
+#flicker-section {
+    background-color: lightskyblue;
+}
