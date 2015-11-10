@@ -10,7 +10,7 @@
 
 >- Add the following JavaScript files to your project
     - https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js - jQuery
-    - http://learning-fuze.github.io/project-apis/hackathon/api-obj.js - LF API Object
+    - http://learning-fuze.github.io/hackathon/api-obj.js - LF API Object
 - A working example can be found <a href="http://learning-fuze.github.io/project-apis/" target="_blank">HERE</a> 
 
 #### YouTube
