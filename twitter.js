@@ -1,14 +1,3 @@
-
- function twitterCallback(success, obj){
-    console.log(success, obj);
-     var author = obj.tweets.statuses[0].user.name;
-     var profpic = obj.tweets.statuses[0].user.profile_image_url;
-     var tweet = obj.tweets.statuses[0].text;
-     var username = obj.tweets.statuses[0].user['screen_name'];
-     var timeStamp = obj.tweets.statuses[0].user['created_at'];
-
-     console.log(tweet, obj);
-}
 $(function(){
     $('button').click(function(){
         var search = $('input').val();
@@ -16,10 +5,24 @@ $(function(){
     });
 });
 
-$(function(){
+function twitterCallback(success, obj){
+    if(success) {
+        console.log(success, obj);
+        for(var i = 0; i<5; i++){
+            var author = obj.tweets.statuses[i].user.name;
+            var profpic = obj.tweets.statuses[i].user.profile_image_url;
+            var tweet = obj.tweets.statuses[i].text;
+            var username = obj.tweets.statuses[i].user['screen_name'];
+            var timeStamp = obj.tweets.statuses[i].user['created_at'];
+            newTweet(author, profpic, tweet, username, timeStamp);
+        }
+    }
+}
 
 
 
+
+function newTweet(author, profpic, tweet, username, timeStamp) {
     var $parentContainer = $('<div>').addClass('container-fluid');
     $('#twitter-section').append($parentContainer); //container that holds all tweets
 
@@ -35,12 +38,12 @@ $(function(){
     $firstRow.append($containerFluid);
     var $picCol = $('<div>').addClass('col-xs-2');
     $containerFluid.append($picCol);
-    var $profPic = $('<img>').addClass('prof-pic');
+    var $profPic = $('<img>').addClass('prof-pic').attr('src', profpic);
     $picCol.append($profPic);
 
     var $authorCol = $('<div>').addClass('col-xs-7');
-    var $h5 = $('<h5>')
-    var $small = $('<small>');
+    var $h5 = $('<h5>').text(author);
+    var $small = $('<small>').text(username);
     $authorCol.append($h5, $small);
     $containerFluid.append($authorCol);
 
@@ -53,30 +56,28 @@ $(function(){
     var $row2 = $('<div>').addClass('row');
     var $container2 = $('<div>').addClass('container-fluid');
     var $tweetText = $('<p>').addClass('tweet-text');
-    var $timeStamp = $('<small>').addClass('time-stamp');
+    var $timeStamp = $('<small>').addClass('time-stamp').text(timeStamp);
     $container2.append($tweetText, $timeStamp);
     $row2.append($container2);
 
     $tweetContainer.append($row2);
 
-    var svgRow = $('<div>').addClass('row');
-        var $firstLink = $('<a>').attr('href', "https://twitter.com/intent/tweet?in_reply_to=463440424141459456");
-        var
+    var $iconRow = $('<div>').addClass('row');
+    var $firstLink = $('<a>').attr('href', "https://twitter.com/intent/tweet?in_reply_to=463440424141459456");
+    var $firstImg = $('<img>').addClass('icon').attr('src', 'images/reply.png');
+    $firstLink.append($firstImg);
+    $iconRow.append($firstLink);
+    var $secondLink = $('<a>').attr('href', "https://twitter.com/intent/retweet?tweet_id=463440424141459456");
+    var $secondImg = $('<img>').addClass('icon').attr('src', 'images/retweet.png');
+    $secondLink.append($secondImg);
+    $iconRow.append($secondLink);
+    var $thirdLink = $('<a>').attr('href', "https://twitter.com/intent/like?tweet_id=463440424141459456");
+    var $thirdImg = $('<img>').addClass('icon').attr('src', 'images/like.png');
+    $thirdLink.append($thirdImg);
+    $iconRow.append($thirdLink);
 
+    $tweetContainer.append($iconRow);
 
+    $('#twitter-section').append($tweetContainer); //append all to tweet container
 
-
-
-
-    $('#twitter-section').append($tweetContainer);
-
-
-
-
-    $('#twitter-section h5').append(author);
-    $('.prof-pic').attr('src', profpic);
-    $('.tweet-text').append(tweet);
-    $('#twitter-section .col-xs-7 small').append(username);
-    $('.time-stamp').append(timeStamp);
-
-});
+}
