@@ -6,16 +6,24 @@ $(function(){
     });
 });
 //loop through the response object and run the add tweets function with the input from each object in array
+
+var author;
+var profpic;
+var tweet;
+var username;
+var timeStamp;
 function twitterCallback(success, obj){
+
     if(success) {
         console.log(success, obj);
         $('#twitter-section .container-fluid').hide();
-            for(var i = 0; i<4; i++){
-                var author = obj.tweets.statuses[i].user.name;
-                var profpic = obj.tweets.statuses[i].user.profile_image_url;
-                var tweet = obj.tweets.statuses[i].text;
-                var username = obj.tweets.statuses[i].user['screen_name'];
-                var timeStamp = obj.tweets.statuses[i].user['created_at'];
+            twitterArray = obj.tweets.statuses;
+            for(z = 0; z<4; z++){
+                author = obj.tweets.statuses[z].user.name;
+                profpic = obj.tweets.statuses[z].user.profile_image_url;
+                tweet = obj.tweets.statuses[z].text;
+                username = obj.tweets.statuses[z].user['screen_name'];
+                timeStamp = obj.tweets.statuses[z].user['created_at'];
                 newTweet(author, profpic, tweet, username, timeStamp);
             }
     }
