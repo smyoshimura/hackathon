@@ -8,6 +8,7 @@ $(function(){
 function twitterCallback(success, obj){
     if(success) {
         console.log(success, obj);
+        $('#twitter-section .container-fluid').hide();
             for(var i = 0; i<5; i++){
                 var author = obj.tweets.statuses[i].user.name;
                 var profpic = obj.tweets.statuses[i].user.profile_image_url;
@@ -24,10 +25,12 @@ function twitterCallback(success, obj){
 
 function newTweet(author, profpic, tweet, username, timeStamp) {
     var $parentContainer = $('<div>').addClass('container-fluid');
+    var $hr = $('<hr>');
+    $parentContainer.append($hr);
     $('#twitter-section').append($parentContainer); //container that holds all tweets
 
     var $tweetContainer = $('<div>').addClass('tweet'); //solo tweet
-    var $hr = $('<hr>');
+
 
     $tweetContainer.append($hr); //append hr to tweet container
     //first row
@@ -76,8 +79,8 @@ function newTweet(author, profpic, tweet, username, timeStamp) {
     $thirdLink.append($thirdImg);
     $iconRow.append($thirdLink);
 
-    $tweetContainer.append($iconRow, $hr);
-
-    $('#twitter-section').append($tweetContainer); //append all to tweet container
+    $tweetContainer.append($iconRow);
+    $parentContainer.append($tweetContainer);
+    $('#twitter-section').append($parentContainer); //append all to tweet container
 
 }
