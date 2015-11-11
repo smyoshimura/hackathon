@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-        <html>
+<html>
 
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="twitter.css">
+    <link href='https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="youtube.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="http://learning-fuze.github.io/hackathon/api-obj.js"></script>
     <script src="flickr.js"></script>
@@ -14,49 +16,41 @@
     <script src="main.js"></script>
     <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
     <style>
-
-
-        .col-xs-12{
+        .col-xs-12 {
             min-height: 40vh;
         }
 
-        .col-xs-6{
+        .col-xs-6 {
             min-height: 40vh;
         }
 
-        form>div.col-xs-6{
+        form > div.col-xs-6 {
             min-height: 20vh
         }
-
-
     </style>
 </head>
 
-
-
 <body>
 <!--search form-->
-<form id="search-section">
-    <div class="form-group col-xs-6">
-        <label>Search!</label>
-        <input type="text" class="form-control span-6">
-        <button type="button" class="btn btn-info">Search!</button>
+<form id="search-section" class="clearfix">
+    <div class="form-group">
+        <label>What do you want to see?</label>
+        <input type="text" class="search-box">
+        <button type="button">Activate the Machine</button>
     </div>
 </form>
 <!--youtube section-->
-<div id= 'youtube-section' class="row">
-    <div class="col-xs-12">Youtube</div>
+<div id='youtube-section' class="row">
+    <div class="col-xs-12"></div>
+    <div id="player"></div>
 
 </div>
 
-
 <div class="row">
     <!-- twitter section-->
-    <div id='twitter-section' class="col-xs-6">Twitter
-
-    </div>
+    <div id='twitter-section' class="col-xs-6"></div>
     <!-- flicker section-->
-    <div id='flicker-section'class="col-xs-6">Flicker</div>
+    <div id='flicker-section' class="col-xs-6"></div>
 </div>
 
 </body>
