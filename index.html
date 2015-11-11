@@ -13,7 +13,7 @@
     <script src="http://learning-fuze.github.io/hackathon/api-obj.js"></script>
     <script src="flickr.js"></script>
     <script src="twitter.js"></script>
-   <script src="youtube.js"></script>
+    <script src="youtube.js"></script>
     <script src="main.js"></script>
     <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
     <style>
@@ -29,25 +29,29 @@
 
 <body>
 
-<!--search form-->
-<form id="search-section" class="clearfix">
-    <div class="form-group">
-        <label>What do you want to see?</label>
-        <input type="text" class="search-box" placeholder="Give it a go!">
-        <button type="button" id="search-button">Activate the Machine</button>
+<div class="page-wrapper">
+    <!--search form-->
+    <div class="search-wrapper">
+        <form id="search-section" class="clearfix">
+            <div class="form-group">
+                <label>What do you want to see?</label>
+                <input type="text" class="search-box" placeholder="Give it a go!">
+                <button type="button" id="search-button">Activate the Machine</button>
+            </div>
+        </form>
     </div>
-</form>
 
-<!--youtube section-->
-<div id='youtube-section' class="row">
+    <!--youtube section-->
+    <div id='youtube-section' class="row">
         <div id="player"></div>
-</div>
+    </div>
 
-<div class="row">
-    <!-- twitter section-->
-    <div id='twitter-section' class="col-xs-6"></div>
-    <!-- flicker section-->
-    <div id='flicker-section' class="col-xs-6"></div>
+    <div class="row">
+        <!-- twitter section-->
+        <div id='twitter-section' class="col-xs-6"></div>
+        <!-- flicker section-->
+        <div id='flickr-section' class="col-xs-6"></div>
+    </div>
 </div>
 
 <div id="flickr-modal" class="modal fade" role="dialog">
