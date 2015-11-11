@@ -62,19 +62,21 @@ body {
     width: 60%;
     margin-right: auto;
     background: url("images/twitterframe.png") center no-repeat;
-    background-size: 100% 99%;
+    background-size: 247% 100%;
     float: left;
 }
 
 #twitter-section {
     height: 45vh;
-    float: right;
-    width: 90%;
+    width: 75%;
+    position: relative;
+    left: 14%;
+    background-color: rgba(249, 245, 245, 1);
 }
 
 #flickr-section {
     height: 45vh;
     width: 40%;
     float: left;
-    background-color: lightskyblue;
+    background-color: rgb(85,172,238);
 }

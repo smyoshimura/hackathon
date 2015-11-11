@@ -10,7 +10,7 @@ function twitterCallback(success, obj){
     if(success) {
         console.log(success, obj);
         $('#twitter-section .container-fluid').hide();
-            for(var i = 0; i<5; i++){
+            for(var i = 0; i<2; i++){
                 var author = obj.tweets.statuses[i].user.name;
                 var profpic = obj.tweets.statuses[i].user.profile_image_url;
                 var tweet = obj.tweets.statuses[i].text;
