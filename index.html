@@ -17,15 +17,6 @@
     <script src="youtube.js"></script>
     <script src="main.js"></script>
     <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
-    <style>
-        .col-xs-6 {
-            min-height: 40vh;
-        }
-
-        form > div.col-xs-6 {
-            min-height: 20vh
-        }
-    </style>
 </head>
 
 <body>
@@ -49,9 +40,12 @@
 
     <div class="row">
         <!-- twitter section-->
-        <div id='twitter-section' class="col-xs-6"></div>
+        <div class="twitter-wrapper clearfix">
+        <div id='twitter-section'></div>
+        </div>
         <!-- flicker section-->
-        <div id='flickr-section' class="col-xs-6"><ul class="nav nav-pills nav-stacked"></ul></div>
+
+        <div id='flickr-section'><ul class="nav nav-pills nav-stacked"></ul></div>
     </div>
 </div>
 
