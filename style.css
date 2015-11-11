@@ -7,7 +7,7 @@ body {
 }
 
 .page-wrapper {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -52,8 +52,8 @@ body {
 
 #youtube-section {
     margin: auto;
-    padding: 1%;
-    height: 50vh;
+    padding: 5%;
+    height: 65vh;
     background: url("images/youtubeframe.png") center no-repeat;
     background-size: 70% 99%;
 }
@@ -67,14 +67,15 @@ body {
 }
 
 #twitter-section {
-    height: 45vh;
+    height: 55vh;
     float: right;
     width: 90%;
 }
 
 #flickr-section {
-    height: 45vh;
+    height: 55vh;
     width: 50%;
     float: left;
-    background-color: lightskyblue;
+    background: url("images/flickrframe.png") center no-repeat;
+    background-size: 100% 99%;
 }

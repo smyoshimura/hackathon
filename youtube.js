@@ -7,7 +7,7 @@ $(document).ready(function () {
         apis.youtube.getData(searchInput,2, function(success, response){
             if(success) {
                 console.log(response);
-                apis.youtube.playVideo(response.video[0].id, "590", 520);
+                apis.youtube.playVideo(response.video[0].id, 300, 450);
                 setTimeout(function () {
                     apis.youtube.stopVideo()
                 }, 20000);
