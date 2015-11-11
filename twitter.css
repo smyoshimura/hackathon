@@ -1,0 +1,26 @@
+.tweet{
+    position: relative;
+    height: 9.2em;
+
+}
+.tweet small{
+    display: block;
+}
+
+img.logo {
+    width: 100%;
+}
+
+
+.prof-pic{
+    width: 100%;
+}
+
+.icon {
+    margin-left: 8%;
+    width: 5%;
+}
+
+.tweet .col-xs-2:first-child {
+    margin-right: 1%;
+}
