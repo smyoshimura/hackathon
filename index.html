@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <!-- Latest compiled and minified CSS -->
+\   <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="twitter.css">
     <link href='https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="youtube.css">
@@ -16,6 +16,14 @@
     <script src="youtube.js"></script>
     <script src="main.js"></script>
     <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
     <style>
         .col-xs-6 {
             min-height: 40vh;
@@ -24,7 +32,15 @@
         form > div.col-xs-6 {
             min-height: 20vh
         }
+        div#player {
+            width: 50%;
+            height: 67%;
+            position: relative;
+            margin: 0 auto;
+            min-width: 253px;
+        }
     </style>
+
 </head>
 
 <body>
@@ -36,24 +52,53 @@
             <div class="form-group">
                 <label>What do you want to see?</label>
                 <input type="text" class="search-box" placeholder="Give it a go!">
-                <button type="button" id="search-button">Activate the Machine</button>
+                <button type="button" id="search-button" data-toggle="modal" data-target="#modal">Activate the Machine</button>
             </div>
         </form>
     </div>
 
-    <!--youtube section-->
-    <div id='youtube-section' class="row">
-        <div id="player"></div>
-    </div>
 
-    <div class="row">
-        <!-- twitter section-->
-        <div class="twitter-wrapper clearfix">
-        <div id='twitter-section'></div>
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="purchaseLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="purchaseLabel">Purchase</h4>
+                </div>
+                <div class="modal-body">
+                    <div id='youtube-section' class="row">
+                        <div id="player"></div>
+                    </div>
+                    <div class="row">
+                        <!-- twitter section-->
+                        <div class="twitter-wrapper clearfix">
+                            <div id='twitter-section'></div>
+                        </div>
+                        <!-- flicker section-->
+                        <div id='flickr-section'></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
-        <!-- flicker section-->
-        <div id='flickr-section'></div>
     </div>
+    <!-- modal end-->
+    <!--youtube section-->
+    <!--<div id='youtube-section' class="row">-->
+        <!--<div id="player"></div>-->
+    <!--</div>-->
+
+    <!--<div class="row">-->
+        <!--&lt;!&ndash; twitter section&ndash;&gt;-->
+        <!--<div class="twitter-wrapper clearfix">-->
+            <!--<div id='twitter-section'></div>-->
+        <!--</div>-->
+        <!--&lt;!&ndash; flicker section&ndash;&gt;-->
+        <!--<div id='flickr-section'></div>-->
+    <!--</div>-->
+
 </div>
 
 
