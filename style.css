@@ -4,6 +4,7 @@ body {
     align-content: center;
     text-align: center;
     font-family: 'Old Standard TT', serif;
+    background-color: #EAEAEA !important;
 }
 
 .page-wrapper {
@@ -13,10 +14,12 @@ body {
 
 .search-wrapper {
     background: url("images/searchframe.png") center no-repeat;
-    background-size: 45% 85%;
-    height: 20vh;
+    background-size: 51% 110%;
+    height: 30vh;
     align-content: center;
     padding: 3%;
+    position: relative;
+    top: 150px;
 }
 
 #search-section label {
@@ -36,9 +39,14 @@ body {
 
 #search-section button {
     margin: auto;
-    padding: 0;
+    padding: 2%!important;
     border: none;
-    background-color: cornsilk;
+    background: -webkit-linear-gradient(rgba(148, 144, 144, 1), cornsilk);
+    position: relative;
+    top: 25px;
+    padding: 1%;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 #search-section button:active {
@@ -64,11 +72,12 @@ body {
     background: url("images/twitterframe.png") center no-repeat;
     background-size: 247% 100%;
     float: left;
+    overflow: scroll;
 }
 
 #twitter-section {
     height: 45vh;
-    width: 75%;
+    width: 86%;
     position: relative;
     left: 14%;
     background-color: rgba(249, 245, 245, 1);
@@ -79,4 +88,41 @@ body {
     width: 40%;
     float: left;
     background-color: rgb(85,172,238);
+}
+
+.col-xs-6 {
+    min-height: 40vh;
+}
+
+form > div.col-xs-6 {
+    min-height: 20vh
+}
+div#player {
+    width: 50%;
+    height: 67%;
+    position: relative;
+    margin: 0 auto;
+    min-width: 253px;
+}
+.modal-dialog {
+    width: 80%;
+    margin: 30px auto;
+}
+.modal-content{
+    background-color: white;
+}
+
+.prof-pic{
+    width: 3em;
+}
+
+form#search-section {
+    position: relative;
+    left: 29%;
+    top: 10%;
+}
+
+button.close {
+    position: relative;
+    bottom: 8px;
 }

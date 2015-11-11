@@ -10,7 +10,7 @@ function twitterCallback(success, obj){
     if(success) {
         console.log(success, obj);
         $('#twitter-section .container-fluid').hide();
-            for(var i = 0; i<2; i++){
+            for(var i = 0; i<4; i++){
                 var author = obj.tweets.statuses[i].user.name;
                 var profpic = obj.tweets.statuses[i].user.profile_image_url;
                 var tweet = obj.tweets.statuses[i].text;
@@ -27,7 +27,7 @@ function twitterCallback(success, obj){
 //takes in the variables needed from the each object in array
 //outputs tweets with the elements added to dom
 function newTweet(author, profpic, tweet, username, timeStamp) {
-    var $parentContainer = $('<div>').addClass('container-fluid');
+    var $parentContainer = $('<div>').addClass('container-fluid text-left');
     var $hr = $('<hr>');
     $parentContainer.append($hr);
     $('#twitter-section').append($parentContainer); //container that holds all tweets
@@ -61,14 +61,14 @@ function newTweet(author, profpic, tweet, username, timeStamp) {
     //second row
     var $row2 = $('<div>').addClass('row');
     var $container2 = $('<div>').addClass('container-fluid');
-    var $tweetText = $('<p>').addClass('tweet-text');
+    var $tweetText = $('<p>').addClass('tweet-text').text(tweet);
     var $timeStamp = $('<small>').addClass('time-stamp').text(timeStamp);
     $container2.append($tweetText, $timeStamp);
     $row2.append($container2);
 
     $tweetContainer.append($row2);
 
-    var $iconRow = $('<div>').addClass('row');
+    var $iconRow = $('<div>').addClass('row text-left');
     var $firstLink = $('<a>').attr('href', "https://twitter.com/intent/tweet?in_reply_to=463440424141459456");
     var $firstImg = $('<img>').addClass('icon').attr('src', 'images/reply.png');
     $firstLink.append($firstImg);
@@ -83,7 +83,7 @@ function newTweet(author, profpic, tweet, username, timeStamp) {
     $iconRow.append($thirdLink);
 
     $tweetContainer.append($iconRow);
-    $parentContainer.append($tweetContainer);
+    $parentContainer.append($tweetContainer, $hr);
     $('#twitter-section').append($parentContainer); //append all to tweet container
 
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <!-- Latest compiled and minified CSS -->
-\   <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="twitter.css">
     <link href='https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="youtube.css">
@@ -25,27 +25,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
 
     <style>
-        .col-xs-6 {
-            min-height: 40vh;
-        }
 
-        form > div.col-xs-6 {
-            min-height: 20vh
-        }
-        div#player {
-            width: 50%;
-            height: 67%;
-            position: relative;
-            margin: 0 auto;
-            min-width: 253px;
-        }
-        .modal-dialog {
-            width: 80%;
-            margin: 30px auto;
-        }
-        .modal-content{
-            background-color: rgba(0,0,0,1);
-        }
     </style>
 
 </head>
@@ -55,10 +35,10 @@
 <div class="page-wrapper">
     <!--search form-->
     <div class="search-wrapper">
-        <form id="search-section" class="clearfix">
-            <div class="form-group">
+        <form id="search-section" class="clearfix col-xs-5">
+            <div class="class="form-group">
                 <label>What do you want to see?</label>
-                <input type="text" class="search-box" placeholder="Give it a go!">
+                <input type="text" class="search-box form-control" placeholder="Give it a go!">
                 <button type="button" id="search-button" data-toggle="modal" data-target="#modal">Activate the Machine</button>
             </div>
         </form>
@@ -70,7 +50,6 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="purchaseLabel">Purchase</h4>
                 </div>
                 <div class="modal-body">
                     <div id='youtube-section' class="row">
