@@ -16,10 +16,6 @@
     <script src="main.js"></script>
     <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
     <style>
-        .col-xs-12 {
-            min-height: 40vh;
-        }
-
         .col-xs-6 {
             min-height: 40vh;
         }
@@ -31,19 +27,19 @@
 </head>
 
 <body>
+
 <!--search form-->
 <form id="search-section" class="clearfix">
     <div class="form-group">
         <label>What do you want to see?</label>
-        <input type="text" class="search-box">
-        <button type="button">Activate the Machine</button>
+        <input type="text" class="search-box" placeholder="Give it a go!">
+        <button type="button" id="search-button">Activate the Machine</button>
     </div>
 </form>
+
 <!--youtube section-->
 <div id='youtube-section' class="row">
-    <div class="col-xs-12"></div>
-    <div id="player"></div>
-
+        <div id="player"></div>
 </div>
 
 <div class="row">

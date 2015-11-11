@@ -1,6 +1,6 @@
 //pulling video from youtube and playing
 $(document).ready(function () {
-    $('.btn').click(function () {
+    $('#search-button').click(function () {
         //console.log("clicked");
         var searchInput=$('input').val();
         console.log(searchInput);
