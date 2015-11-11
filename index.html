@@ -5,19 +5,18 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="twitter.css">
     <link href='https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="youtube.css">
+    <link rel="stylesheet" href="flickr1.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="http://learning-fuze.github.io/hackathon/api-obj.js"></script>
     <script src="flickr.js"></script>
     <script src="twitter.js"></script>
     <script src="youtube.js"></script>
     <script src="main.js"></script>
+    <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
     <style>
-        .col-xs-12 {
-            min-height: 40vh;
-        }
-
         .col-xs-6 {
             min-height: 40vh;
         }
@@ -28,28 +27,39 @@
     </style>
 </head>
 
-
 <body>
 
-<form id="search-section" class="clearfix">
-    <div class="form-group">
-        <label>What do you want to see?</label>
-        <input type="text" class="search-box" placeholder="Give it a go!">
-        <button type="button" id="search-button">Activate the Machine</button>
+<div class="page-wrapper">
+    <!--search form-->
+    <div class="search-wrapper">
+        <form id="search-section" class="clearfix">
+            <div class="form-group">
+                <label>What do you want to see?</label>
+                <input type="text" class="search-box" placeholder="Give it a go!">
+                <button type="button" id="search-button">Activate the Machine</button>
+            </div>
+        </form>
     </div>
-</form>
 
-<div id='youtube-section' class="row">
-    <div>
-        <div id="player">
-        </div>
+    <!--youtube section-->
+    <div id='youtube-section' class="row">
+        <div id="player"></div>
+    </div>
+
+    <div class="row">
+        <!-- twitter section-->
+        <div id='twitter-section' class="col-xs-6"></div>
+        <!-- flicker section-->
+        <div id='flickr-section' class="col-xs-6"></div>
     </div>
 </div>
 
-
-<div class="row">
-    <div id='twitter-section' class="col-xs-6"></div>
-    <div id='flicker-section' class="col-xs-6">Flicker</div>
+<div id="flickr-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body"></div>
+        </div>
+    </div>
 </div>
 
 </body>

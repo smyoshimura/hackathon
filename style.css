@@ -1,35 +1,42 @@
 body {
+    margin: auto;
+    width: 100vw;
+    align-content: center;
     text-align: center;
     font-family: 'Old Standard TT', serif;
 }
 
-#search-section {
+.page-wrapper {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.search-wrapper {
     background: url("images/searchframe.png") center no-repeat;
     background-size: 45% 85%;
     height: 20vh;
     align-content: center;
+    padding: 3%;
 }
 
 #search-section label {
-    position: absolute;
-    top: 6%;
-    left: 42.5%;
+    margin: auto;
+    padding: 2% 0 0 0;
+    display: block;
 }
 
 .search-box {
-    margin: auto;
+    align-content: center;
+    margin: 1% auto;
+    padding: 0;
     float: none;
-    width: 30%;
-    position: absolute;
-    top: 9%;
-    left: 35%;
+    width: 20%;
+    display: block;
 }
 
 #search-section button {
     margin: auto;
-    position: absolute;
-    top: 12%;
-    left: 43.5%;
+    padding: 0;
     border: none;
     background-color: cornsilk;
 }
@@ -57,6 +64,6 @@ body {
     background-size: 100% 99%;
 }
 
-#flicker-section {
+#flickr-section {
     background-color: lightskyblue;
 }
