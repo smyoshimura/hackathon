@@ -58,12 +58,23 @@ body {
     background-size: 70% 99%;
 }
 
-#twitter-section {
+.twitter-wrapper {
+    width: 50%;
     margin-right: auto;
     background: url("images/twitterframe.png") center no-repeat;
     background-size: 100% 99%;
+    float: left;
+}
+
+#twitter-section {
+    height: 45vh;
+    float: right;
+    width: 90%;
 }
 
 #flickr-section {
+    height: 45vh;
+    width: 50%;
+    float: left;
     background-color: lightskyblue;
 }
