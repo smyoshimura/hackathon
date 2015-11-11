@@ -7,6 +7,10 @@ body {
     background-color: #EAEAEA !important;
 }
 
+form#search-section {
+    position: relative !important;
+    left: 29% !important;
+}
 .page-wrapper {
     max-width: 1100px;
     margin: auto;
@@ -79,9 +83,8 @@ body {
     height: 45vh;
     width: 86%;
     position: relative;
-    left: 14%;
-    background-color: rgba(249, 245, 245, 1);
-}
+    left: 17%;
+    bottom: 7px;
 
 #flickr-section {
     height: 45vh;
@@ -116,11 +119,7 @@ div#player {
     width: 3em;
 }
 
-form#search-section {
-    position: relative;
-    left: 29%;
-    top: 10%;
-}
+
 
 button.close {
     position: relative;

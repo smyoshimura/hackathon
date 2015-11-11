@@ -13,7 +13,7 @@ $(document).ready(function() {
 function getFlickr() {
     var flickrData;
     var keyWord = $("input").val();
-    var numPhotos = 4;
+    var numPhotos = 12;
 
     apis.flickr.getData(keyWord, numPhotos, function (success, resp) {
         if(success) {
