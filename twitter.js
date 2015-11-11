@@ -8,14 +8,14 @@ $(function(){
 function twitterCallback(success, obj){
     if(success) {
         console.log(success, obj);
-        for(var i = 0; i<5; i++){
-            var author = obj.tweets.statuses[i].user.name;
-            var profpic = obj.tweets.statuses[i].user.profile_image_url;
-            var tweet = obj.tweets.statuses[i].text;
-            var username = obj.tweets.statuses[i].user['screen_name'];
-            var timeStamp = obj.tweets.statuses[i].user['created_at'];
-            newTweet(author, profpic, tweet, username, timeStamp);
-        }
+            for(var i = 0; i<5; i++){
+                var author = obj.tweets.statuses[i].user.name;
+                var profpic = obj.tweets.statuses[i].user.profile_image_url;
+                var tweet = obj.tweets.statuses[i].text;
+                var username = obj.tweets.statuses[i].user['screen_name'];
+                var timeStamp = obj.tweets.statuses[i].user['created_at'];
+                newTweet(author, profpic, tweet, username, timeStamp);
+            }
     }
 }
 
@@ -76,7 +76,7 @@ function newTweet(author, profpic, tweet, username, timeStamp) {
     $thirdLink.append($thirdImg);
     $iconRow.append($thirdLink);
 
-    $tweetContainer.append($iconRow);
+    $tweetContainer.append($iconRow, $hr);
 
     $('#twitter-section').append($tweetContainer); //append all to tweet container
 
