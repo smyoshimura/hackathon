@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="twitter.css">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="youtube.css">
+    <link rel="stylesheet" href="flickr1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://learning-fuze.github.io/hackathon/api-obj.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="flickr.js"></script>
+    <script src="twitter.js"></script>
+    <script src="youtube.js"></script>
+    <script src="main.js"></script>
+    <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+</head>
+
+<body>
+
+<h1>The Media Marvels Machine</h1>
+
+<div class="page-wrapper">
+    <!--search form-->
+    <div class="search-wrapper">
+        <form id="search-section" class="clearfix">
+            <div class="form-group">
+                <label>What do you want to see?</label>
+                <input type="text" class="search-box" placeholder="Give it a go!">
+                <button type="button" id="search-button">Activate the Machine</button>
+            </div>
+        </form>
+    </div>
+
+    <!--youtube section-->
+    <div id='youtube-section' class="row">
+        <div id="player"></div>
+    </div>
+
+    <div class="row">
+        <!-- twitter section-->
+        <div class="twitter-wrapper clearfix">
+            <div id='twitter-section' class="clearfix"></div>
+        </div>
+        <!-- flicker section-->
+        <div class="flickr-wrapper">
+            <div id='flickr-section'>
+                <ul class="nav nav-pills nav-stacked"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- flickr modal section-->
+<div class="row">
+    <div id="flickr-modal" class="modal fade carousel slide">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="carousel-inner">
+                    </div>
+                    <a class="left carousel-control" href="#flickr-modal" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#flickr-modal" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
