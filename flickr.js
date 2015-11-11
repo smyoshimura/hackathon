@@ -7,41 +7,65 @@ $(document).ready(function() {
     });
 });
 
-
-
-// Get Flickr photos via API call and append to #flicker-section DOM
+// Get Flickr images via API call and append to #flickr-section DOM
 function getFlickr() {
     var flickrData;
     var keyWord = $("input").val();
-    var numPhotos = 9;
+    // numImages sets the number of images to retrieve and display
+    var numImages = 9;
 
-    apis.flickr.getData(keyWord, numPhotos, function (success, resp) {
-        if(success) {
-            $("#flickr-section").append("<br>");
-            flickrData = resp;
+    if (keyWord !== "") {
+        apis.flickr.getData(keyWord, numImages, function (success, resp) {
+            if (success) {
+                flickrData = resp;
+                $("#flickr-section").append("<br>");
 
-            // Loop to append images to #flicker-section div
-            for (var i=0; i<flickrData.photos.photo.length; i++) {
-                var img = $("<img>", {
-                    src: flickrData.urls[i]
-                });
-                var linkImg = $("<a>", {
-                    href: flickrData.urls[i],
-                    target: "_blank"
-                }).attr("data-toggle","modal").attr("data-target","#flickr-modal");
+                // Append images to flicker section & flickr modal/carousel
+                for (var i = 0; i < flickrData.photos.photo.length; i++) {
+                    var img = $("<img>", {
+                        src: flickrData.urls[i]
+                    });
+                    var img2 = $("<img>", {
+                        src: flickrData.urls[i]
+                    });
 
-                linkImg.append(img);
-                $("#flickr-section").append(linkImg);
+                    // Append images to #flickr-section ul.nav
+                    var navA = $("<a>").attr("href","#flickr-modal").attr("data-toggle", "modal").append(img);
+                    var navLi = $("<li>").append(navA);
+                    $("#flickr-section ul.nav").append(navLi);
+
+                    // Append images to #flickr-modal .carousel-inner
+                    if (i === 0) {
+                        var itemDiv = $("<div class='item active'>").append(img2);
+                        $("#flickr-modal .carousel-inner").append(itemDiv);
+                    }
+                    else {
+                        itemDiv = $("<div class='item'>").append(img2);
+                        $("#flickr-modal .carousel-inner").append(itemDiv);
+                    }
+
+                    /* Open images in new tab - Non-modal method */
+                    //var linkImg = $("<a>", {
+                    //    href: flickrData.urls[i],
+                    //    target: "_blank"
+                    //});
+                    //linkImg.append(img);
+                    //$("#flickr-section").append(linkImg);
+                }
             }
-        }
-        else {
-            console.log("Flickr failed");
-        }
-    });
+            else {
+                console.log("Flickr failed");
+            }
+        });
+    }
+    else {
+        $("#flickr-section").text("Nothing entered. Search something!");
+    }
 }
 
 // Clear DOM contents prior to populating data
 function clearBox() {
-    $("#flickr-section").empty();
-    $("#flickr-section").text("Flickr");
+    $("#flickr-section ul.nav").empty();
+    $("#flickr-modal .carousel-inner").empty();
+   // $("#flickr-section").text("Flickr");
 }

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="flickr1.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="http://learning-fuze.github.io/hackathon/api-obj.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="flickr.js"></script>
     <script src="twitter.js"></script>
     <script src="youtube.js"></script>
@@ -50,14 +51,23 @@
         <!-- twitter section-->
         <div id='twitter-section' class="col-xs-6"></div>
         <!-- flicker section-->
-        <div id='flickr-section' class="col-xs-6"></div>
+        <div id='flickr-section' class="col-xs-6"><ul class="nav nav-pills nav-stacked"></ul></div>
     </div>
 </div>
 
-<div id="flickr-modal" class="modal fade" role="dialog">
+<div id="flickr-modal" class="modal fade carousel slide">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-body"></div>
+            <div class="modal-body">
+                <div class="carousel-inner">
+                </div>
+                <a class="left carousel-control" href="#flickr-modal" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#flickr-modal" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
         </div>
     </div>
 </div>

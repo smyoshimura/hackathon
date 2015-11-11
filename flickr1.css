@@ -4,3 +4,15 @@
     margin: 5px;
     border-radius: 5px;
 }
+#flickr-section li {
+    display: inline-block;
+}
+#flickr-section a {
+    padding: 0;
+}
+#flickr-modal {
+    position: absolute;
+}
+#flickr-modal .item img {
+    margin: auto;
+}
