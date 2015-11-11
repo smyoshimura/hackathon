@@ -1,10 +1,11 @@
+//doc ready, when button gets click, ajax request to twitter for search results array
 $(function(){
     $('button').click(function(){
         var search = $('input').val();
         apis.twitter.getData(search, twitterCallback);
     });
 });
-
+//loop through the response object and run the add tweets function with the input from each object in array
 function twitterCallback(success, obj){
     if(success) {
         console.log(success, obj);
@@ -22,7 +23,9 @@ function twitterCallback(success, obj){
 
 
 
-
+//dynamic creation
+//takes in the variables needed from the each object in array
+//outputs tweets with the elements added to dom
 function newTweet(author, profpic, tweet, username, timeStamp) {
     var $parentContainer = $('<div>').addClass('container-fluid');
     var $hr = $('<hr>');
