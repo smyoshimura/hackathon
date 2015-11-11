@@ -60,16 +60,16 @@ body {
 
 .twitter-wrapper {
     width: 50%;
-    margin-right: auto;
     background: url("images/twitterframe.png") center no-repeat;
     background-size: 100% 99%;
     float: left;
 }
 
 #twitter-section {
-    height: 50vh;
+    height: 53vh;
+    margin: 1%;
     float: right;
-    width: 65%;
+    width: 66%;
 }
 
 #flickr-section {

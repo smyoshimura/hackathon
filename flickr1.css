@@ -4,3 +4,8 @@
     margin: 5px;
     border-radius: 5px;
 }
+
+#flickr-modal {
+    position: fixed;
+    vertical-align: middle;
+}

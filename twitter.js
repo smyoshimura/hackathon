@@ -61,7 +61,7 @@ function newTweet(author, profpic, tweet, username, timeStamp) {
     //second row
     var $row2 = $('<div>').addClass('row');
     var $container2 = $('<div>').addClass('container-fluid');
-    var $tweetText = $('<p>').addClass('tweet-text');
+    var $tweetText = $('<p>').addClass('tweet-text').text(tweet);
     var $timeStamp = $('<small>').addClass('time-stamp').text(timeStamp);
     $container2.append($tweetText, $timeStamp);
     $row2.append($container2);
@@ -83,7 +83,7 @@ function newTweet(author, profpic, tweet, username, timeStamp) {
     $iconRow.append($thirdLink);
 
     $tweetContainer.append($iconRow);
-    $parentContainer.append($tweetContainer);
+    $parentContainer.append($tweetContainer, $hr);
     $('#twitter-section').append($parentContainer); //append all to tweet container
 
 }
