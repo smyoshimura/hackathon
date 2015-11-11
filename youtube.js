@@ -5,9 +5,10 @@ $(document).ready(function () {
         //console.log("clicked");
         var searchInput=$('input').val();
         console.log(searchInput);
-        apis.youtube.getData(searchInput,2, function(success, response){
+        apis.youtube.getData(searchInput,3, function(success, response){
             if(success) {
                 console.log(response);
+                youtubeArray = response.video;
                 apis.youtube.playVideo(response.video[0].id, '55%', '60%');
                 setTimeout(function () {
                     apis.youtube.stopVideo()
@@ -16,7 +17,7 @@ $(document).ready(function () {
                 console.log("YouTube Failed");
             }
         });
-    })
+    });
 });
 
 //console.log(apis.youtube.playerInfo.player);

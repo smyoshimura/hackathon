@@ -13,15 +13,16 @@ $(document).ready(function() {
 function getFlickr() {
     var flickrData;
     var keyWord = $("input").val();
-    var numPhotos = 12;
+    var numPhotos = 24;
 
     apis.flickr.getData(keyWord, numPhotos, function (success, resp) {
         if(success) {
             $("#flickr-section").append("<br>");
             flickrData = resp;
-
+            flickerArray = flickrData.urls;
+            console.log(flickerArray);
             // Loop to append images to #flicker-section div
-            for (var i=0; i<flickrData.photos.photo.length; i++) {
+            for (var i=0; i<8; i++) {
                 var img = $("<img>", {
                     src: flickrData.urls[i]
                 });
@@ -33,6 +34,7 @@ function getFlickr() {
                 linkImg.append(img);
                 $("#flickr-section").append(linkImg);
             }
+            q=i;
         }
         else {
             console.log("Flickr failed");

@@ -15,7 +15,6 @@ var timeStamp;
 function twitterCallback(success, obj){
 
     if(success) {
-        console.log(success, obj);
         $('#twitter-section .container-fluid').hide();
             twitterArray = obj.tweets.statuses;
             for(z = 0; z<4; z++){
