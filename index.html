@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="twitter.css">
     <link href='https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="youtube.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -13,6 +14,7 @@
     <script src="twitter.js"></script>
     <script src="youtube.js"></script>
     <script src="main.js"></script>
+    <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
     <style>
         .col-xs-12 {
             min-height: 40vh;
@@ -28,9 +30,8 @@
     </style>
 </head>
 
-
 <body>
-
+<!--search form-->
 <form id="search-section" class="clearfix">
     <div class="form-group">
         <label>What do you want to see?</label>
@@ -38,17 +39,18 @@
         <button type="button">Activate the Machine</button>
     </div>
 </form>
-
+<!--youtube section-->
 <div id='youtube-section' class="row">
-    <div class="col-xs-12">Youtube</div>
+    <div class="col-xs-12"></div>
     <div id="player"></div>
 
 </div>
 
-
 <div class="row">
-    <div id='twitter-section' class="col-xs-6">Twitter</div>
-    <div id='flicker-section' class="col-xs-6">Flicker</div>
+    <!-- twitter section-->
+    <div id='twitter-section' class="col-xs-6"></div>
+    <!-- flicker section-->
+    <div id='flicker-section' class="col-xs-6"></div>
 </div>
 
 </body>
