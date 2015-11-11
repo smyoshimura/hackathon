@@ -43,5 +43,5 @@ function getFlickr() {
 // Clear DOM contents prior to populating data
 function clearBox() {
     $("#flickr-section").empty();
-    $("#flickr-section").text("Flickr");
+
 }

@@ -8,7 +8,7 @@ $(document).ready(function () {
         apis.youtube.getData(searchInput,2, function(success, response){
             if(success) {
                 console.log(response);
-                apis.youtube.playVideo(response.video[0].id, '65%', '63%');
+                apis.youtube.playVideo(response.video[0].id, '55%', '60%');
                 setTimeout(function () {
                     apis.youtube.stopVideo()
                 }, 20000);

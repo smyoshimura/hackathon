@@ -5,6 +5,7 @@ body {
     text-align: center;
     font-family: 'Old Standard TT', serif;
     background-color: #EAEAEA !important;
+    min-width:
 }
 
 form#search-section {
@@ -24,6 +25,24 @@ form#search-section {
     padding: 3%;
     position: relative;
     top: 150px;
+}
+
+div#player {
+    border: 1px solid black;
+    width: 56%;
+    height: 18em;
+    position: relative;
+    top: 7%;
+    margin: 0 auto;
+}
+
+iframe {
+    border: 8px solid black;
+    width: 53%;
+    height: 26%;
+    position: absolute;
+    transform: translate(-50%);
+    top: 6%;
 }
 
 #search-section label {
@@ -67,16 +86,17 @@ form#search-section {
     padding: 1%;
     height: 50vh;
     background: url("images/youtubeframe.png") center no-repeat;
-    background-size: 107% 128%;
+    background-size: 100% 100%;
 }
 
 .twitter-wrapper {
     width: 60%;
-    margin-right: auto;
     background: url("images/twitterframe.png") center no-repeat;
     background-size: 247% 100%;
     float: left;
     overflow: scroll;
+    position: relative;
+    margin-top: 2%;
 }
 
 #twitter-section {
@@ -125,3 +145,4 @@ button.close {
     position: relative;
     bottom: 8px;
 }
+

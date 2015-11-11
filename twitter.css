@@ -27,3 +27,30 @@ img.logo {
 .tweet .col-xs-2:first-child {
     margin-right: 1%;
 }
+
+
+.glyphicon.glyphicon-chevron-right{
+    position: absolute !important;
+    right: 1.5% !important;
+    top: 46% !important;
+    z-index: 1 !important;
+    font-size: 3em !important;
+    border: 1px solid black !important;
+    padding: 1% !important;
+    background-color: rgb(163, 86, 86) !important;
+}
+
+.glyphicon.glyphicon-chevron-left{
+    position: absolute !important;
+    left: 1.5% !important;
+    top: 46% !important;
+    z-index: 1 !important;
+    font-size: 3em !important;
+    border: 1px solid black !important;
+    padding: 1% !important;
+    background-color: rgb(163, 86, 86) !important;
+}
+
+.glyphicon:hover{
+    cursor: pointer;
+}
