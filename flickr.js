@@ -17,11 +17,13 @@ function getFlickr() {
 
     apis.flickr.getData(keyWord, numPhotos, function (success, resp) {
         if(success) {
-            $("#flickr-section").append("<br>");
+        var container = $('<div>').addClass('flickr-container');
+            $("#flickr-section").append(container);
+            container.append("<br>");
             flickrData = resp;
             flickerArray = flickrData.urls;
             // Loop to append images to #flicker-section div
-            for (var i=0; i<4; i++) {
+            for (var i=0; i<6; i++) {
                 var img = $("<img>", {
                     src: flickrData.urls[i]
                 });
@@ -31,7 +33,7 @@ function getFlickr() {
                 }).attr("data-toggle","modal").attr("data-target","#flickr-modal");
 
                 linkImg.append(img);
-                $("#flickr-section").append(linkImg);
+                container.append(linkImg);
             }
             q=i;
         }

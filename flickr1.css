@@ -1,8 +1,8 @@
 #flickr-section img {
-    transform: rotate3d(22,-22, -11, 30deg);
+    transform: rotate3d(-.5,.5, -.5, 26deg);
     position: relative;
-    left: 15%;
-    bottom: -10%;
-    margin-top: -5%;
-    width: 31%;
+    left: -8%;
+    bottom: 6%;
+    margin-top: 1%;
+    width: 34%;
 }

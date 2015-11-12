@@ -20,17 +20,17 @@ $(function(){
         }
 
         //flicker get next
-        var flickerlimit = q+4;
+        var flickerlimit = q+6;
         $('#flickr-section a').hide();
-        console.log('q : ' + q);
-        console.log(flickerArray);
-            for (q; q<flickerlimit; q++) {
-                var img = $("<img>", {src: flickerArray[q]} );
-                var linkImg = $("<a>", {href: flickerArray[q], target: "_blank"}).attr("data-toggle","modal").attr("data-target","#flickr-modal");
-                linkImg.append(img);
-                $("#flickr-section").append(linkImg);
-            }
+
+        for (q; q<flickerlimit; q++) {
+            var img = $("<img>", {src: flickerArray[q]});
+            var linkImg = $("<a>", {href: flickerArray[q], target: "_blank"}).attr("data-toggle","modal").attr("data-target","#flickr-modal");
+            linkImg.append(img);
+            $('.flickr-container').append(linkImg);
+        }
 
         //youtube get next
     });
 });
+
