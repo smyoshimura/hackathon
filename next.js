@@ -4,6 +4,7 @@ var flickerArray;
 
 var z;  //i will be four at the end of the first loop
 var q;
+var y;
 $(function(){
     $('.glyphicon-chevron-right, .glyphicon-chevron-right').click(function(){
 
@@ -29,6 +30,18 @@ $(function(){
             linkImg.append(img);
             $('.flickr-container').append(linkImg);
         }
+
+        //youtube
+        if (document.getElementsByTagName('iframe')) {
+            $('iframe').replaceWith('<div id="player"></div>');
+            y+=1;
+            console.log(youtubeArray);
+            apis.youtube.playVideo(youtubeArray[y].id, 300, 450);
+                    onYouTubeIframeAPIReady();
+                }
+
+
+
 
         //youtube get next
     });

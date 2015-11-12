@@ -23,6 +23,7 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
     <script src="next.js"></script>
+    <script src="itunes.js"></script>
     <link rel="stylesheet" href="twitter.css">
     <style>
         div#flickr-section {
@@ -58,8 +59,41 @@
         #twitter-section .container-fluid {
             margin-top: 2%;
         }
+        h1{
+            position: relative;
+            top: 3em;
+            text-decoration: underline;
+        }
 
+        #twitter-section .container-fluid {
+            margin-top: 2%;
+            background-color: rgba(253, 253, 253, 0.26);
+        }
+        div#itunes-results {
 
+            width: 95%;
+            position: relative;
+            margin: 0 auto;
+
+            top: 12em;
+
+        }
+        #itunes-results .col-xs-2 {
+            margin: 1% 0 1% 3%;
+        }
+
+        .form-group.form-group.col-xs-4.col-xs-offset-4 {
+            position: relative;
+            top: 18%;
+        }
+
+        #itunes-results img {
+            padding: 4%;
+
+        }
+        #itunes-results img:hover{
+            background-color: black;
+        }
     </style>
 
 </head>
@@ -71,52 +105,59 @@
 </script>
 <body>
 
+<h1>The Media Marvels Machine</h1>
+
 <div class="page-wrapper">
     <!--search form-->
-    <div class="search-wrapper">
-        <form id="search-section" class="clearfix col-xs-5">
-            <div class="class="form-group">
-                <label>What do you want to see?</label>
-                <input type="text" class="search-box form-control" placeholder="Give it a go!">
-                <button type="button" id="search-button" data-toggle="modal" data-target="#modal">Activate the Machine</button>
-            </div>
-        </form>
-    </div>
+        <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="purchaseLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
 
-
-    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="purchaseLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div id='youtube-section' class="row">
-                        <div id="player"></div>
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                        <span class="glyphicon glyphicon-chevron-right"></span>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
-                    <div class="row">
-                        <!-- twitter section-->
-                        <div class="twitter-wrapper clearfix">
-                            <div id='twitter-section'></div>
+                    <div class="modal-body">
+                        <div id='youtube-section' class="row">
+                            <div id="player"></div>
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="glyphicon glyphicon-chevron-right"></span>
                         </div>
-                        <!-- flicker section-->
-                        <div id='flickr-section'>
+                        <div class="row">
+                            <!-- twitter section-->
+                            <div class="twitter-wrapper clearfix">
+                                <div id='twitter-section'></div>
+                            </div>
+                            <!-- flicker section-->
+                            <div id='flickr-section'>
 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
+</div>
+
+<div class="search-wrapper">
+    <div class="form-group form-group col-xs-4 col-xs-offset-4">
+        <select class="form-control">
+            <option>Pick A Genre!</option>
+            <option class="option">Comedy</option>
+            <option class="option">Action & Adventure</option>
+        </select>
     </div>
 </div>
 
+<div id="itunes-results" class="row">
 
+    <div class="col-xs-12">
+        <button class=type="button" id="search-button" data-toggle="modal" data-target="#modal">Activate the Machine</button>
+    </div>
+
+</div>
 
 </body>
 
