@@ -1,11 +1,15 @@
 .tweet{
     position: relative;
     height: 9.2em;
-    margin: 5%;
+    margin-bottom: 6%;
 
 }
 .tweet small{
     display: block;
+}
+
+.tweet .row:last-child {
+    margin: -3%;
 }
 
 img.logo {

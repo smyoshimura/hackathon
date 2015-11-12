@@ -28,7 +28,6 @@ form#search-section {
 }
 
 div#player {
-    border: 1px solid black;
     width: 56%;
     height: 18em;
     position: relative;
@@ -37,7 +36,6 @@ div#player {
 }
 
 iframe {
-    border: 8px solid black;
     width: 53%;
     height: 26%;
     position: absolute;
@@ -132,9 +130,7 @@ div#player {
     width: 80%;
     margin: 30px auto;
 }
-.modal-content{
-    background-color: white;
-}
+
 
 .prof-pic{
     width: 3em;

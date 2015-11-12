@@ -36,7 +36,7 @@ function twitterCallback(success, obj){
 function newTweet(author, profpic, tweet, username, timeStamp) {
     var $parentContainer = $('<div>').addClass('container-fluid text-left');
     var $hr = $('<hr>');
-    $parentContainer.append($hr);
+
     $('#twitter-section').append($parentContainer); //container that holds all tweets
 
     var $tweetContainer = $('<div>').addClass('tweet'); //solo tweet
@@ -69,8 +69,8 @@ function newTweet(author, profpic, tweet, username, timeStamp) {
     var $row2 = $('<div>').addClass('row');
     var $container2 = $('<div>').addClass('container-fluid');
     var $tweetText = $('<p>').addClass('tweet-text').text(tweet);
-    var $timeStamp = $('<small>').addClass('time-stamp').text(timeStamp);
-    $container2.append($tweetText, $timeStamp);
+    //var $timeStamp = $('<small>').addClass('time-stamp').text(timeStamp);
+    $container2.append($tweetText);
     $row2.append($container2);
 
     $tweetContainer.append($row2);
@@ -90,7 +90,7 @@ function newTweet(author, profpic, tweet, username, timeStamp) {
     $iconRow.append($thirdLink);
 
     $tweetContainer.append($iconRow);
-    $parentContainer.append($tweetContainer, $hr);
+    $parentContainer.append($tweetContainer);
     $('#twitter-section').append($parentContainer); //append all to tweet container
 
 }
