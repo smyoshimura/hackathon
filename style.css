@@ -111,7 +111,7 @@ iframe {
     width: 40%;
     float: left;
     background-color: rgb(85,172,238);
-    background: url("images/flickrframe.png");
+    background-image: url("images/flickrframe.png");
 }
 
 .col-xs-6 {

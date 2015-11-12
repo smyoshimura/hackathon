@@ -20,7 +20,7 @@ $(function(){
         }
 
         //flicker get next
-        var flickerlimit = q+8;
+        var flickerlimit = q+4;
         $('#flickr-section a').hide();
         console.log('q : ' + q);
         console.log(flickerArray);

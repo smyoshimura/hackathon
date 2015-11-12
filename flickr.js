@@ -20,9 +20,8 @@ function getFlickr() {
             $("#flickr-section").append("<br>");
             flickrData = resp;
             flickerArray = flickrData.urls;
-            console.log(flickerArray);
             // Loop to append images to #flicker-section div
-            for (var i=0; i<8; i++) {
+            for (var i=0; i<4; i++) {
                 var img = $("<img>", {
                     src: flickrData.urls[i]
                 });
