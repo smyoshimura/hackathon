@@ -7,10 +7,11 @@ var q;
 var y;
 $(function(){
     $('.glyphicon-chevron-right, .glyphicon-chevron-left').click(function(){
-        console.log('twitter :' + z);console.log('youtube :' + y);console.log('flicker :' + q);
+        console.log('twitter before :' + z);console.log('youtube before:' + y);console.log('flicker before:' + q);
+
         //twitter get next
         $('#twitter-section .container-fluid').hide();
-        z -= 3;
+        z -= 4;
         if(z <= 0){
             z=12;
         }
@@ -25,7 +26,7 @@ $(function(){
         }
 
         //flicker get next
-        q -= 6;
+        q -= 12;
         if(q<=0){
             q=18;
         }
@@ -45,11 +46,13 @@ $(function(){
             $('iframe').replaceWith('<div id="player"></div>');
             y-=1;
             if(y <= 0){
-                y = 20;
+                y = (youtubeArray.length)-1;
             }
             console.log(youtubeArray);
             apis.youtube.playVideo(youtubeArray[y].id, 300, 450);
             onYouTubeIframeAPIReady();
         }
+        console.log('twitter after :' + z);console.log('youtube after:' + y);console.log('flicker after:' + q);
+
     });
 });
