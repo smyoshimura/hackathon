@@ -4,7 +4,7 @@ $(document).ready(function () {
     $('#search-button').click(function () {
         if (document.getElementsByTagName('iframe')) {
             $('iframe').replaceWith('<div id="player"></div>');
-            var searchInput = $('input').val();                                                                //storing the input value in the search bar into searchInput variable
+            var searchInput = searchVal;                                                               //storing the input value in the search bar into searchInput variable
             //checking to see if input is stored properly
             apis.youtube.getData(searchInput, 20, function (success, response) {                                //using created getData function with searchInput, 2, and a callback function as parameters
                 if (success) {                                                                                 //if data is retrieved and stored, call the playVideo function; currently, only accesses index 0

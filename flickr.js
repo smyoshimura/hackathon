@@ -12,7 +12,7 @@ $(document).ready(function() {
 // Get Flickr photos via API call and append to #flicker-section DOM
 function getFlickr() {
     var flickrData;
-    var keyWord = $("input").val();
+    var keyWord = searchVal;
     var numPhotos = 24;
 
     apis.flickr.getData(keyWord, numPhotos, function (success, resp) {

@@ -1,7 +1,7 @@
 //doc ready, when button gets click, ajax request to twitter for search results array
 $(function(){
     $('button').click(function(){
-        var search = $('input').val();
+        var search = searchVal;
         apis.twitter.getData(search, twitterCallback);
     });
 });
