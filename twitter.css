@@ -35,7 +35,7 @@ img.logo {
 
 .glyphicon.glyphicon-chevron-right{
     position: absolute !important;
-    right: -8.5% !important;
+    right: -7.5% !important;
     top: 46% !important;
     z-index: 1 !important;
     font-size: 3em !important;
@@ -46,7 +46,7 @@ img.logo {
 
 .glyphicon.glyphicon-chevron-left{
     position: absolute !important;
-    left: -8.5% !important;
+    left: -7.5% !important;
     top: 46% !important;
     z-index: 1 !important;
     font-size: 3em !important;

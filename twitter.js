@@ -17,6 +17,7 @@ function twitterCallback(success, obj){
     if(success) {
         $('#twitter-section .container-fluid').hide();
             twitterArray = obj.tweets.statuses;
+        console.log(obj);
             for(z = 0; z<4; z++){
                 author = obj.tweets.statuses[z].user.name;
                 profpic = obj.tweets.statuses[z].user.profile_image_url;

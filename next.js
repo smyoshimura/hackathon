@@ -7,9 +7,12 @@ var q;
 var y;
 $(function(){
     $('.glyphicon-chevron-right, .glyphicon-chevron-right').click(function(){
-
+        console.log('z :' + z);console.log('q :' + y);console.log('y :' + y);
         //twitter get next
         $('#twitter-section .container-fluid').hide();
+        if(z===15){
+            z=0;
+        }
         var twitterLimit = z+3;
         for(z; z<twitterLimit; z++){
             author = twitterArray[z].user.name;
@@ -21,7 +24,11 @@ $(function(){
         }
 
         //flicker get next
+        if(q === 24){
+            q = 0;
+        }
         var flickerlimit = q+6;
+
         $('#flickr-section a').hide();
 
         for (q; q<flickerlimit; q++) {
@@ -35,15 +42,13 @@ $(function(){
         if (document.getElementsByTagName('iframe')) {
             $('iframe').replaceWith('<div id="player"></div>');
             y+=1;
+            if(y === 20){
+                y = 0;
+            }
             console.log(youtubeArray);
             apis.youtube.playVideo(youtubeArray[y].id, 300, 450);
                     onYouTubeIframeAPIReady();
                 }
-
-
-
-
-        //youtube get next
     });
 });
 
