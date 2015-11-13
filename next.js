@@ -15,7 +15,7 @@ $(function(){
             author = twitterArray[z].user.name;
             profpic = twitterArray[z].user.profile_image_url;
             tweet = twitterArray[z].text;
-            username = twitterArray[z].user['screen_name'];
+            username = twitterArray[z].user['scree n_name'];
             timeStamp = twitterArray[z].user['created_at'];
             newTweet(author, profpic, tweet, username, timeStamp);
         }

@@ -39,13 +39,12 @@
         .flickr-container {
             width: 54%;
             position: relative;
-            left: 33%;
-            top: 12%;
+            left: 30%;
+            top: 11%;
             perspective: 674px;
             overflow: hidden;
-            height: 86%;
-            transform: skew(-19.5deg) rotateZ(-18.5deg);
-
+            height: 87%;
+            transform: skew(-15.5deg) rotateZ(-15.5deg);
         }
 
         .modal-header {
@@ -94,6 +93,71 @@
         #itunes-results img:hover{
             background-color: black;
         }
+        body {
+            min-width: 750px !important;
+        }
+
+        div#modal {
+            min-width: 769px;
+        }
+        @media screen and (max-width: 992px){
+            .flickr-container{
+                width: 73%;
+                position: relative;
+                left: 29%;
+                top: 5%;
+                perspective: 674px;
+                overflow: hidden;
+                height: 61%;
+                transform: skew(-16.5deg) rotateZ(-16.5deg);
+                border-radius: 0 77px 61px 0;
+            }
+        }
+        @media screen and (max-width: 768px){
+                .flickr-container {
+                    width: 70%;
+                    position: relative;
+                    left: 30.4%;
+                    top: 8%;
+                    perspective: 674px;
+                    overflow: hidden;
+                    height: 71%;
+                    transform: skew(-16.5deg) rotateZ(-16.5deg);
+                    border-radius: 0 65px 63px 0;
+                }
+            #flickr-section img{
+                transform: rotate3d(0,.5, 0, 26deg);
+                position: relative;
+                left: 1%;
+                bottom: 6%;
+                width: 50%;
+                height: 7em;
+                margin-left: -6%;
+            }
+        }
+        @media screen and (min-width: 992px) {
+            #flickr-section img {
+                transform: rotate3d(0,.5, 0, 26deg);
+                position: relative;
+                left: 1%;
+                bottom: 6%;
+                width: 50%;
+                height: 10em;
+                margin-left: -6%;
+            }
+            .flickr-container{
+                width: 71%;
+                position: relative;
+                left: 30%;
+                top: 8%;
+                perspective: 674px;
+                overflow: hidden;
+                height: 93%;
+                transform: skew(-18.5deg) rotateZ(-18.5deg);
+                border-radius: 0 108px 82px 75px;
+            }
+        }
+
     </style>
 
 </head>
