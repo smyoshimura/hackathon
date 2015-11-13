@@ -16,6 +16,18 @@ $(function(){
         getFromItunes(url);
     });
 
+    $('body').on('click', '.movie', function(){
+            var curSrc = $(this).attr('src');
+
+            for (var y = 0; y < itunesArray.length; y++) {
+                if (curSrc === itunesArray[y]['im:image'][2].label) {
+                    searchVal = itunesArray[y]['im:name'].label;
+                    console.log(searchVal);
+                }
+            }
+        console.log(searchVal);
+        });
+
 });
 
 function getFromItunes(url){
@@ -32,17 +44,7 @@ function getFromItunes(url){
             for(var i =0; i<result.feed.entry.length;i++){
                 col = $('<div>').addClass('col-xs-2');
                 link = result.feed.entry[i]['im:image'][2].label;
-                img = $('<img>').attr('src', link).addClass('movie').click(function() {
-
-                    var curSrc = $(this).attr('src');
-
-                    for (var y = 0; y < itunesArray.length; y++) {
-                        if (curSrc === itunesArray[y]['im:image'][2]) {
-                            searchVal = itunesArray[y]['im:name'].label;
-
-                        }
-                    }
-                });
+                img = $('<img>').attr('src', link).addClass('movie');
 
 
                 col.append(img);
