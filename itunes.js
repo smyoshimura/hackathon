@@ -1,8 +1,10 @@
 var itunesArray;
 var searchVal;
 $(function(){
+    $('#search-button').hide();
     //select an genere, movies pop up
     $('select').change(function(){//on select of genre,, loop through i-array and grab the code, stick in url and run the itunes get function
+
         var selectArray = [{genre: 'Comedy', code: 4404}, {genre: 'Action & Adventure', code: 4401}];
         var curGenre = $('.option:selected').text();
         var curCode;
@@ -25,7 +27,7 @@ $(function(){
                     console.log(searchVal);
                 }
             }
-        console.log(searchVal);
+        $('#search-button').show();
         });
 
 });
@@ -50,6 +52,10 @@ function getFromItunes(url){
                 col.append(img);
                 $('#itunes-results').append(col);
             }
+            col = $('<div>').addClass('col-xs-offset-1');
+            $('#itunes-results').append(col);
+
+
         }
     });
 }
