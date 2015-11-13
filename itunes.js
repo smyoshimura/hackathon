@@ -1,11 +1,25 @@
 var itunesArray;
 var searchVal;
 $(function(){
+    $('div#itunes-results').hide();
     $('#search-button').hide();
     //select an genere, movies pop up
     $('select').change(function(){//on select of genre,, loop through i-array and grab the code, stick in url and run the itunes get function
-
-        var selectArray = [{genre: 'Comedy', code: 4404}, {genre: 'Action & Adventure', code: 4401}];
+        $('div#itunes-results .col-xs-2, div#itunes-results .col-xs-1').remove();
+        $('#search-button').hide();
+        $('#itunes-results h5').show();
+        var selectArray = [
+            {genre: 'Comedy', code: 4404},
+            {genre: 'Action & Adventure', code: 4401},
+            {genre: 'Sci-Fi & Fantasy', code: 4413},
+            {genre: 'Thriller', code: 4416},
+            {genre: 'Documentary', code: 4405},
+            {genre: 'Sports', code: 4417},
+            {genre: 'Classics', code: 4403},
+            {genre: 'Romance', code: 4412},
+            {genre: 'Western', code: 4418},
+            {genre: 'Drama', code: 4406}
+        ];
         var curGenre = $('.option:selected').text();
         var curCode;
         var url;
@@ -19,6 +33,10 @@ $(function(){
     });
 
     $('body').on('click', '.movie', function(){
+            $('#itunes-results h5').hide();
+            $('.movie').removeClass('movieClicked');
+            $(this).addClass('movieClicked');
+
             var curSrc = $(this).attr('src');
 
             for (var y = 0; y < itunesArray.length; y++) {
@@ -39,6 +57,7 @@ function getFromItunes(url){
         dataType: 'json',
         url: url,
         success: function(result) {
+            $('div#itunes-results').show('slow');
             itunesArray = result.feed.entry;
 
             //loop

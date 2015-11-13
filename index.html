@@ -76,6 +76,7 @@
             margin: 0 auto;
             background-color: rgba(2, 2, 2, 0.87);
             border-radius: 5px;
+            padding-top: 1%;
         }
         #itunes-results .col-xs-2 {
             margin: 1% 0 1% 3%;
@@ -92,6 +93,9 @@
         }
         #itunes-results img:hover{
             background-color: rgb(217, 64, 64)
+        }
+        .movieClicked{
+            background-color: rgb(217, 64, 64);
         }
         body {
             min-width: 750px !important;
@@ -157,6 +161,9 @@
                 border-radius: 0 120px 40px 94px;
             }
         }
+        #itunes-results h5{
+            color: white;
+        }
 
     </style>
 
@@ -209,14 +216,23 @@
             <option>Pick A Genre!</option>
             <option class="option">Comedy</option>
             <option class="option">Action & Adventure</option>
+            <option class="option">Sci-Fi & Fantasy</option>
+            <option class="option">Thriller</option>
+            <option class="option">Documentary</option>
+            <option class="option">Sports</option>
+            <option class="option">Classics</option>
+            <option class="option">Romance</option>
+            <option class="option">Western</option>
+            <option class="option">Drama</option>
         </select>
+        <h5>select a genre</h5>
     </div>
 </div>
 
 <div id="itunes-results" class="row">
-
+    <h5>select a movie</h5>
     <div class="col-xs-12">
-        <button class=type="button" id="search-button" data-toggle="modal" data-target="#modal">Activate the Machine</button>
+        <button class='btn btn-default' type="button" id="search-button" data-toggle="modal" data-target="#modal">Activate the Machine</button>
     </div>
 
 </div>
