@@ -7,10 +7,10 @@ var q;
 var y;
 $(function(){
     $('.glyphicon-chevron-right, .glyphicon-chevron-right').click(function(){
-        console.log('z :' + z);console.log('q :' + y);console.log('y :' + y);
         //twitter get next
+        console.log('twitter before :' + z);console.log('youtube before:' + y);console.log('flicker before:' + q);
         $('#twitter-section .container-fluid').hide();
-        if(z===15){
+        if(z>=twitterArray.length){
             z=0;
         }
         var twitterLimit = z+3;
@@ -24,7 +24,7 @@ $(function(){
         }
 
         //flicker get next
-        if(q === 24){
+        if(q >= flickerArray.length){
             q = 0;
         }
         var flickerlimit = q+6;
@@ -42,13 +42,16 @@ $(function(){
         if (document.getElementsByTagName('iframe')) {
             $('iframe').replaceWith('<div id="player"></div>');
             y+=1;
-            if(y === 20){
+            if(y >= youtubeArray.length){
                 y = 0;
             }
             console.log(youtubeArray);
             apis.youtube.playVideo(youtubeArray[y].id, 300, 450);
                     onYouTubeIframeAPIReady();
                 }
+        console.log('twitter after :' + z);console.log('youtube after:' + y);console.log('flicker after:' + q);
+
     });
+
 });
 

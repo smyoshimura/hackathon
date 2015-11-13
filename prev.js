@@ -6,12 +6,13 @@ var z;  //i will be four at the end of the first loop
 var q;
 var y;
 $(function(){
-    $('.glyphicon-chevron-right, .glyphicon-chevron-right').click(function(){
-        console.log('z :' + z);console.log('q :' + y);console.log('y :' + y);
+    $('.glyphicon-chevron-right, .glyphicon-chevron-left').click(function(){
+        console.log('twitter :' + z);console.log('youtube :' + y);console.log('flicker :' + q);
         //twitter get next
         $('#twitter-section .container-fluid').hide();
-        if(z===15){
-            z=0;
+        z -= 3;
+        if(z <= 0){
+            z=12;
         }
         var twitterLimit = z+3;
         for(z; z<twitterLimit; z++){
@@ -24,8 +25,9 @@ $(function(){
         }
 
         //flicker get next
-        if(q === 24){
-            q = 0;
+        q -= 6;
+        if(q<=0){
+            q=18;
         }
         var flickerlimit = q+6;
 
@@ -41,9 +43,9 @@ $(function(){
         //youtube
         if (document.getElementsByTagName('iframe')) {
             $('iframe').replaceWith('<div id="player"></div>');
-            y+=1;
-            if(y === 20){
-                y = 0;
+            y-=1;
+            if(y <= 0){
+                y = 20;
             }
             console.log(youtubeArray);
             apis.youtube.playVideo(youtubeArray[y].id, 300, 450);
